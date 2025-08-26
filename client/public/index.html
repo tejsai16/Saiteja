@@ -2,54 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Saiteja Web App</title>
+    <title>Saiteja Consulting</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Navigation -->
     <nav>
-      <button class="nav-btn" onclick="location.href='index.html'">Home</button>
-      <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
-      <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
-      <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
-      <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
-      <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
-      <button class="nav-btn" id="loginBtn">Login with Microsoft</button>
+      <div class="brand">Saiteja Consulting</div>
+      <div class="nav-links">
+        <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+        <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
+        <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
+        <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
+        <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
+        <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
+        <button class="nav-btn primary" id="loginBtn">Login</button>
+      </div>
     </nav>
-    <div class="container">
-      <section class="hero">
-        <div class="hero-text">
-          <h1>Saiteja Consulting</h1>
-          <p>Professional services and solutions to help your business grow. We deliver strategy, engineering, and design with a practical, measurable approach.</p>
-          <div class="hero-actions">
-            <a href="get-in-touch.html" class="btn primary">Get in Touch</a>
-            <a href="signup.html" class="btn ghost">Request Demo</a>
-          </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Driving Global Business Excellence</h1>
+        <p>
+          We partner with organizations worldwide to deliver strategy,
+          innovation, and technology solutions that accelerate growth
+          and transform ideas into results.
+        </p>
+        <div class="hero-actions">
+          <a href="get-in-touch.html" class="btn primary">Get Started</a>
+          <a href="signup.html" class="btn secondary">Request Demo</a>
         </div>
-        <div class="hero-media">
-          <img src="logo192.png" alt="Brand" style="width:160px;border-radius:8px;">
-        </div>
-      </section>
-    </div>
+      </div>
+      <div class="hero-media">
+        <img src="logo192.png" alt="Brand" />
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature-card">
+        <h3>🌍 Global Strategy</h3>
+        <p>Innovative, data-driven strategies designed for international markets.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💡 Innovation</h3>
+        <p>Creative technology solutions tailored to your business vision.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🤝 Partnerships</h3>
+        <p>Long-term collaborations to ensure sustainable business growth.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Saiteja Consulting. All rights reserved.</p>
+    </footer>
+
     <script>
-      document.getElementById('loginBtn').onclick = function() {
+      document.getElementById('loginBtn').onclick = function () {
         window.location.href = '/login';
       };
     </script>

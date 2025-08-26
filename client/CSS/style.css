@@ -70,9 +70,25 @@ nav .nav-btn:hover{background:rgba(255,255,255,0.03); color:#fff;}
 .btn.primary{background:var(--primary);color:#fff}
 .btn.ghost{background:transparent;color:var(--primary);border:1px solid rgba(17,34,68,0.08)}
 
+/* ripple */
+.nav-btn{position:relative;overflow:hidden}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.15);transform:scale(0);animation:ripple 600ms linear;pointer-events:none}
+@keyframes ripple{to{transform:scale(3);opacity:0}}
+
+/* counters */
+.counter{font-weight:700;color:var(--primary);font-size:1.4rem}
+
 /* Forms */
 .form-card{background:var(--card);padding:20px;border-radius:10px;border:1px solid rgba(16,24,40,0.04)}
 .form-input{width:100%;padding:10px 12px;border-radius:6px;border:1px solid #e6eefc;background:#fff;margin-bottom:12px}
 .form-label{display:block;margin-bottom:6px;font-weight:600;color:#0b2545}
 
 footer{max-width:1100px;margin:24px auto;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* overlay / modal */
+.overlay{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;z-index:200;opacity:0;pointer-events:none;transition:opacity .2s}
+.overlay.show{opacity:1;pointer-events:auto}
+.overlay .modal{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 12px 40px rgba(2,6,23,0.3);max-width:420px;text-align:center}
+.overlay .modal h3{margin:0 0 12px;color:#0b2545}
+.overlay .modal p{color:var(--muted);margin:0 0 18px}
+.overlay .modal .close{background:transparent;border:none;color:var(--primary);font-weight:700;cursor:pointer}

@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup - Saiteja Web App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiteja Consulting - Create Account</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
-    <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
-    <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
-    <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
-    <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
-    <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
-    <button class="nav-btn primary" id="loginBtn">Login with Microsoft</button>
-  </nav>
-  <main>
-    <h2>Signup</h2>
-      <div class="container">
-        <div class="form-card" style="max-width:520px;margin:0 auto;">
-          <h2>Signup</h2>
-          <form id="signupForm">
-            <label class="form-label" for="name">Name</label>
-            <input class="form-input" id="name" name="name" />
-            <label class="form-label" for="username">Username</label>
-            <input class="form-input" id="username" name="username" />
-            <label class="form-label" for="email">Email</label>
-            <input class="form-input" id="email" name="email" type="email" />
-            <button type="submit" class="btn primary" style="width:100%;">Sign Up</button>
-          </form>
+
+        <nav>
+            <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+            <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
+            <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
+            <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
+            <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
+            <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
+            <button class="nav-btn primary" id="loginBtn">Login with Microsoft</button>
+        </nav>
+
+        <div class="container">
+            <div class="form-card" style="max-width:640px;margin:36px auto;">
+                <h1>Create an Account</h1>
+                <form id="signupForm">
+                    <label class="form-label" for="fullName">Full Name</label>
+                    <input class="form-input" type="text" id="fullName" name="fullName" placeholder="Enter your name">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-input" type="text" id="username" name="username" placeholder="Choose a username">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="Enter your email">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-input" type="password" id="password" name="password" placeholder="Create a password">
+                    <button type="submit" class="btn primary" style="width:100%;margin-top:8px;">Sign Up</button>
+                </form>
+            </div>
         </div>
-      </div>
-    <hr style="margin:32px 0;">
-    <button class="nav-btn" style="width:100%;" onclick="location.href='login.html'">Login</button>
-  </main>
-  <script>
-    document.getElementById('signupForm').onsubmit = function(e) {
-      e.preventDefault();
-      alert('Signup submitted! (Backend integration coming soon)');
-    };
-    document.getElementById('loginBtn').onclick = function() {
-      alert('Microsoft login coming soon!');
-    };
-  </script>
+
+        <footer class="site-footer">
+            <p>© 2025 Saiteja Consulting. All rights reserved.</p>
+        </footer>
+
+        <div class="overlay" id="signupOverlay">
+            <div class="modal">
+                <h3>Account Created</h3>
+                <p>Your account registration request has been received. We'll contact you shortly.</p>
+                <button class="close" id="overlayClose">Close</button>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script>
+            document.getElementById('signupForm').addEventListener('submit', function(e){
+                e.preventDefault();
+                // Basic client-side validation
+                const email = document.getElementById('email').value;
+                if (!email.includes('@')) {
+                    alert('Please enter a valid email');
+                    return;
+                }
+                document.getElementById('signupOverlay').classList.add('show');
+            });
+            document.getElementById('overlayClose').addEventListener('click', function(){
+                document.getElementById('signupOverlay').classList.remove('show');
+            });
+        </script>
+
 </body>
 </html>
