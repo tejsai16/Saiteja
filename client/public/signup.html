@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Saiteja Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+    <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
+    <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
+    <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
+    <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
+    <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
+    <button class="nav-btn primary" id="loginBtn">Login with Microsoft</button>
+  </nav>
+  <main>
+    <h2>Signup</h2>
+      <div class="container">
+        <div class="form-card" style="max-width:520px;margin:0 auto;">
+          <h2>Signup</h2>
+          <form id="signupForm">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" id="name" name="name" />
+            <label class="form-label" for="username">Username</label>
+            <input class="form-input" id="username" name="username" />
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" />
+            <button type="submit" class="btn primary" style="width:100%;">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    <hr style="margin:32px 0;">
+    <button class="nav-btn" style="width:100%;" onclick="location.href='login.html'">Login</button>
+  </main>
+  <script>
+    document.getElementById('signupForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Signup submitted! (Backend integration coming soon)');
+    };
+    document.getElementById('loginBtn').onclick = function() {
+      alert('Microsoft login coming soon!');
+    };
+  </script>
+</body>
+</html>

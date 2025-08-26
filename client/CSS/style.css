@@ -1,0 +1,78 @@
+/* Professional/business theme */
+:root{
+  --bg:#f5f7fa;
+  --nav:#0b2545; /* deep navy */
+  --primary:#1666d0; /* corporate blue */
+  --muted:#6b7280;
+  --card:#ffffff;
+  --accent:#0b66ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:#112;
+  -webkit-font-smoothing:antialiased;
+}
+nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:18px 28px;
+  background:var(--nav);
+  color:#fff;
+  box-shadow: 0 2px 8px rgba(11,37,69,0.08);
+}
+nav .brand{
+  font-weight:700;
+  font-size:1.1rem;
+  color:#fff;
+  margin-right:auto;
+}
+nav .nav-btn{
+  background:transparent;
+  color:#e6eefc;
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid transparent;
+  cursor:pointer;
+  transition:background .15s, color .15s, border-color .15s;
+}
+nav .nav-btn.primary{
+  background:var(--primary);
+  color:#fff;
+  border-color:rgba(255,255,255,0.06);
+}
+nav .nav-btn:hover{background:rgba(255,255,255,0.03); color:#fff;}
+/* Content container */
+.container{
+  max-width:1100px;
+  margin:36px auto;
+  padding:32px;
+}
+.hero{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(16,24,40,0.06);
+  padding:36px;
+}
+.hero .hero-text{flex:1}
+.hero h1{font-size:2rem;margin:0 0 12px;color:#0b2545}
+.hero p{color:var(--muted);margin:0 0 18px;font-size:1rem}
+.hero-actions{display:flex;gap:12px}
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;border:none;cursor:pointer;
+}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid rgba(17,34,68,0.08)}
+
+/* Forms */
+.form-card{background:var(--card);padding:20px;border-radius:10px;border:1px solid rgba(16,24,40,0.04)}
+.form-input{width:100%;padding:10px 12px;border-radius:6px;border:1px solid #e6eefc;background:#fff;margin-bottom:12px}
+.form-label{display:block;margin-bottom:6px;font-weight:600;color:#0b2545}
+
+footer{max-width:1100px;margin:24px auto;text-align:center;color:var(--muted);font-size:0.95rem}

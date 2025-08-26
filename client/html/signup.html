@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Saiteja Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+    <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
+    <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
+    <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
+    <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
+    <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
+    <button class="nav-btn" id="loginBtn">Login with Microsoft</button>
+  </nav>
+  <main>
+    <h2>Signup</h2>
+    <form id="signupForm" style="max-width:400px;margin:0 auto;text-align:left;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email" required style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+      <button type="submit" class="nav-btn" style="width:100%;margin-top:8px;">Signup</button>
+    </form>
+    <hr style="margin:32px 0;">
+    <button class="nav-btn" style="width:100%;" onclick="location.href='login.html'">Login</button>
+  </main>
+  <script>
+    document.getElementById('signupForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Signup submitted! (Backend integration coming soon)');
+    };
+    document.getElementById('loginBtn').onclick = function() {
+      alert('Microsoft login coming soon!');
+    };
+  </script>
+</body>
+</html>

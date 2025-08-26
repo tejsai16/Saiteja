@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Saiteja Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+    <button class="nav-btn" onclick="location.href='get-in-touch.html'">Get in Touch</button>
+    <button class="nav-btn" onclick="location.href='signup.html'">Signup</button>
+    <button class="nav-btn" onclick="location.href='downloads.html'">Downloads</button>
+    <button class="nav-btn" onclick="location.href='admin.html'">Admin</button>
+    <button class="nav-btn" onclick="location.href='gallery.html'">Gallery</button>
+    <button class="nav-btn" id="loginBtn">Login with Microsoft</button>
+  </nav>
+  <main>
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm" style="max-width:400px;margin:0 auto;text-align:left;">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+      <button type="submit" class="nav-btn" style="width:100%;margin-top:8px;">Login</button>
+    </form>
+  </main>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById('adminLoginForm').onsubmit = function(e) {
+      e.preventDefault();
+      alert('Admin login submitted! (Backend integration coming soon)');
+    };
+  </script>
+</body>
+</html>
