@@ -1,25 +1,31 @@
-# Modern Web App for Saiteja
+# Saiteja
 
-This project contains a React frontend and Node.js/Express backend with Azure AD authentication, user and admin features, and easy file management.
+Static frontend served by a minimal Express backend with optional Azure AD login.
 
-## Features
-- Home: Azure login, sample text/images, auto logout
-- Get in Touch: Instagram, WhatsApp, Email links
-- Signup: Name, Username, Email, login for users
-- Admin: Login, dashboard, drag & drop upload, manage/delete files, auto content update
+What this repo contains:
+- `client/public` – static HTML/CSS/JS frontend (professional theme)
+- `server` – lightweight Express server that serves static files and provides Azure AD login routes
 
-## How to Run
-1. Install dependencies in `client` and `server` folders
-2. Configure Azure AD credentials in backend
-3. Start backend and frontend servers
+Quick start
 
-## Replace Sample Content
-- Home page text/images can be replaced in `client/src/pages/Home.js`
-- Social links in `client/src/pages/GetInTouch.js`
+1. Install server dependencies from the `server` folder:
 
-## Admin Credentials
-- Username: saiteja.muddasani
-- Password: Breweries@2025
+	npm install
 
-## Contact
-For support, reach out via the Get in Touch page.
+2. Add Azure credentials in `server/.env` (optional if not using login):
+
+	AZURE_TENANT_ID=
+	AZURE_CLIENT_ID=
+	AZURE_CLIENT_SECRET=
+
+3. Run the server:
+
+	node server/index.js
+
+View the site at `http://localhost:5000`.
+
+Notes
+- The `client/public` folder is the source of truth for frontend pages. Delete `client/html` if present.
+- Azure login requires configuring an app registration in Azure AD and populating `server/.env`.
+
+If you want help enabling GitHub Pages or an automatic deploy pipeline, I can set that up.
